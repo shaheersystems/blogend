@@ -1,14 +1,10 @@
 import React from "react";
-
 function Sidebar() {
   return (
-    <div className="w-64 flex items-center justify-center flex-col space-y-4">
-      <button className="bg-black px-3 border border-black py-1 text-white rounded-full">
-        Get Unlimited Access
-      </button>
-      <button className="bg-white border border-black px-3 py-1 rounded-full">
-        Get Unlimited Access
-      </button>
+    <div className="w-72 flex items-center justify-start py-6 flex-col space-y-5 border-l border-gray-300">
+      <div>
+        <h1 className="text-4xl font-black">Blogend.</h1>
+      </div>
     </div>
   );
 }
