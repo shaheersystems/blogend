@@ -6,7 +6,7 @@ import TrendingIcon from "../icons/TrendingIcon";
 import WriteIcon from "../icons/WriteIcon";
 function AppBar() {
   return (
-    <div className="flex sticky flex-col items-center justify-between pt-5 pb-5 w-20 h-screen border-r border-gray-300">
+    <div className="flex fixed left-0 flex-col items-center justify-between pt-5 pb-5 w-20 h-screen border-r border-gray-300">
       <div>
         <Link to="/">
           <h1 className="text-3xl font-black">B.</h1>
