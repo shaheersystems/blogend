@@ -6,12 +6,15 @@ faker.seed(9800);
 const SavedPosts = createContext();
 function Context({ children }) {
   const [savedPosts, setSavedPosts] = useState([]);
+  const [darkMode, setDarkMode] = useState(false);
   const postsArray = [...Array(50)].map(() => ({
     id: faker.datatype.uuid(),
     title: faker.lorem.lines(1),
     content: faker.lorem.paragraphs(2),
     category: faker.word.noun(),
     date: faker.date.month(),
+    postUrl: faker.internet.url(),
+    postLikes: faker.datatype.number(1000),
     author: {
       authorFName: faker.name.firstName(),
       authorLName: faker.name.lastName(),
@@ -22,7 +25,9 @@ function Context({ children }) {
   console.log(postsArray[10].date);
   const [posts] = useState(postsArray);
   return (
-    <SavedPosts.Provider value={{ posts, savedPosts, setSavedPosts }}>
+    <SavedPosts.Provider
+      value={{ posts, savedPosts, setSavedPosts, darkMode, setDarkMode }}
+    >
       {children}
     </SavedPosts.Provider>
   );
